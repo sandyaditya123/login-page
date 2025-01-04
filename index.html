@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: monospace;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 2rem;
+                
+                background-size: 300%;
+                background-color: rgb(119,228,119);
+                background-image: linear-gradient(90deg, rgba(119,228,119,1) 22%,  rgba(89,148,108,1) 55%,
+                rgba(217,194,109,1) 99%);
+                animation: animate 25s infinite alternate;
+            }
+            
+            h1 {
+                font-size: 5rem;
+                color: #90CAF9;
+                text-shadow: -4px 1px 0 #595959;
+            }
+            
+            h2 {
+                font-size: 3rem;
+                color: #90CAF9;
+                text-shadow: 0 0 10px #595959;
+            }
+            
+            @keyframes animate {
+                0% {
+                    background-position: right;
+                }
+                
+                100% {
+                    background-position: left;
+                }
+            }
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 1.7rem;
+            }
+            
+            form input[type="text"], [type="password"] {
+                width: 255px;
+                height: 30px;
+                border-radius: 9px;
+                border: none;
+                padding: 5px;
+            }
+            
+            form input[type="text"]:focus {
+                background-color: rgb(181, 238, 238);
+            }
+            
+            form input[type="password"]:focus {
+                background-color: rgb(181, 238, 238);
+            }
+            
+            form input[type="button"] {
+                width: 110px;
+                height: 40px;
+                font-size: 15px;
+                margin-bottom: 1rem;
+                
+                background-color: #80deea;
+                color: #006064;
+                box-shadow: 1px 1px 5px 1px blanchedalmond;
+                cursor: pointer;
+                border: transparent;
+            }
+            
+            form input[type="button"]:hover {
+                background-color: #006064;
+                color: #80deea;
+                transition: all 0.5s ease-out;
+            }
+            
+            a {
+                font-size: 1.25rem;
+                color: #006064;
+                margin-block: 0.7rem;
+                text-decoration: none;
+            }
+            
+            a:hover {
+                font-size: 1.3rem;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Welcome!</h1>
+        <h2>Login to your account</h2>
+        <form>
+            <input type="text" placeholder="Username"><br>
+            <input type="password" placeholder="Password"><br>
+            <input type="button" name="login" value="Log in">
+            <a href="#">Don't have an account?</a>
+            <input type="button" name="sign up" value="Sign up">
+        </form>
+    </body>
+</html>
